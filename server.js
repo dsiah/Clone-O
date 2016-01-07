@@ -6,8 +6,7 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
 
-val = 0;
-playmap = {}
+var val = 0, playmap = {};
 
 io.on('connection', function(socket){
   // socket.broadcast.emit('a user connected');
@@ -19,16 +18,15 @@ io.on('connection', function(socket){
 		playmap[clientIpAddress].sid = sid;
 	} else {
 		socket.emit('initial', 'welcome  ' + sid);
-		playmap[clientIpAddress] = {sid:sid, val:val};
+		playmap[clientIpAddress] = { sid:sid, val:val };
 	}
 
-	console.log(playmap);
+	console.log(playmap); // Debugging open socket connections
 	
   socket.on('action', function(val) {
   	console.log('val', val);
   	io.emit('action', val + 1);
   });
-
 });
 
 http.listen(3000, function(){
