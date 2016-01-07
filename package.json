@@ -1,0 +1,32 @@
+{
+  "name": "rack-o",
+  "version": "1.0.0",
+  "description": "realtime rack-o game",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsiah/Clone-O.git"
+  },
+  "keywords": [
+    "rack-o",
+    "card",
+    "cards",
+    "node",
+    "python",
+    "game",
+    "sorting"
+  ],
+  "author": "David Siah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dsiah/Clone-O/issues"
+  },
+  "homepage": "https://github.com/dsiah/Clone-O#readme",
+  "dependencies": {
+    "express": "^4.13.3",
+    "socket.io": "^1.4.0"
+  }
+}
